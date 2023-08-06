@@ -221,7 +221,7 @@
 
 .case__list {
     margin: 0;
-    padding-left: 30px;
+    padding: 0;
     list-style: none;
     margin-top: 32px;
 
@@ -229,13 +229,14 @@
 
 .case__item {
     position: relative;
+    padding-left: 27px;
 }
 
 .case__item::before {
     content: "";
     position: absolute;
     top: 9px;
-    right: 1100px;
+    left: 2px;
     width: 8px;
     height: 8px;
     background-color: var(--basic-border-color);
