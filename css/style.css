@@ -229,7 +229,7 @@
 
 .case__item {
     position: relative;
-    padding-left: 26px;
+    padding-left: 25px;
 }
 
 .case__item::before {
