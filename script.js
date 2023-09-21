@@ -1,21 +1,18 @@
-var subMenuButton = document.querySelector(".nav__item--has-children");
-var subMenu = document.querySelector(".sub-menu");
-var form = document.querySelector(".review__form");
-var feedbackInput = form.querySelector("[name=feedback]");
-var nameInput = form.querySelector("[name=Name]");
+let subMenu = document.querySelector(".sub-menu");
+let form = document.querySelector(".review__form");
+let feedbackInput = form.querySelector("[name=feedback]");
+let nameInput = form.querySelector("[name=Name]");
 
-var makeElement = function(tagName, className, text) {
-    var element = document.querySelector(tagName);
-    element.classList.add(className);
-    if (text) {
-        element.textContent = text;
+let menu = function(evt) {
+    if (evt.target.closest(".nav__item--has-children")) {
+        subMenu.classList.toggle("hidden")
     }
-    return element;
+    if (!evt.target.closest(".nav__item--has-children")) {
+        subMenu.classList.add("hidden");
+    }
 };
 
-subMenuButton.addEventListener("click", function () {
-    subMenu.classList.toggle("hidden");
-});
+document.addEventListener("click", menu);
 
 
 form.addEventListener("submit", function (evt) {
